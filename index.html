@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Optimizer</title>
+    <link href="/static/calculator.css" rel="stylesheet">
+</head>
+<body>
+  <center>
+    <br>
+    <br>
+    <h1>Python Flask Warehouse Optimizer</h1>
+    <div>
+      <br>
+      <br>
+     <form method="post" action="{{ url_for('operation_result') }}" id="calculator_form">
+        <label for="Input1">Starting_location:</label>
+        <input type="text" name="Input1" id="Input1">
+        <br>
+        <br>
+        <label for="Input2">Intermediary_location:</label>
+        <input type="Input2" name="Input2" id="Input2">
+        <br>
+        <br>
+        <label for="Input3">Ending_location:</label>
+        <input type="Input3" name="Input3" id="Input3">
+        <br>
+        <br>
+        <label for="operation">Operation</label>
+        <select id="operation" name="operation">
+            <option value="+">Best Path</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit"/>
+        <br>
+        <br>
+        <input type="reset"  value="RESET" style="color: red;"/>
+     </form>
+    </div>
+    {% if calculation_success == True %}
+        <br>
+        <p>The best path calculation for {{input1}} , {{input2}} , {{input3}} is: {{result}}</p>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Maximizing Revenues</h1>
+    <br>
+    <br>
+    <h2>click charts button to view the charts fo maximizing revenues</h2>
+    <br>
+    <br>
+    <p align="center">
+      <a href=about >
+        <button class=grey style="height:35px;width:75px">charts</button>
+      </a>
+    </p>
+  </center>
+</body>
+</html>
